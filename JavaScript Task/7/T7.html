@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>Task 7</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <marquee behavior="scroll" direction="right" id="train">
+            <img src="train1.png">
+        </marquee>
+        <script>
+            document.getElementById('train').stop();
+        </script>
+        <center>
+        <h1>Click the following buttons to handle animation</h1>
+        <button onclick="document.getElementById('train').start();">Start</button>
+        <button onclick="document.getElementById('train').stop();">Stop</button>
+    </body>
+</html>

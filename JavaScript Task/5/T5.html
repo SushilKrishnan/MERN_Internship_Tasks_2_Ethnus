@@ -1,0 +1,84 @@
+<html>
+<head>
+    <title>Task 5</title>
+</head>
+<body>
+    <form>
+        <table>
+            <tr>
+                <td>Name: </td>
+                <td><input type="text" id="1f"></td>
+                <td id="1" style="color: red;"></td>
+            </tr>
+            <tr>
+                <td>Email: </td>
+                <td><input type="text" id="2f"></td>
+                <td id="2" style="color: red;"></td>
+            </tr>
+            <tr>
+                <td>Website: </td>
+                <td><input type="text" id="3f"></td>
+                <td id="3" style="color: red;"></td>
+            </tr>
+            <tr>
+                <td>Message: </td>
+                <td><textarea id="4f" cols="25" rows="3"></textarea></td>
+                <td id="4" style="color: red;"></td>
+            </tr>
+            <tr>
+                <td>
+
+                </td>
+                <td>
+                    <input type="button" value="Submit" onclick="check()">
+                </td>
+            </tr>
+        </table>
+    </form>
+    <script>
+        function check()
+        {
+            if((String)(document.getElementById("1f").value).length==0)
+            {
+                document.getElementById("1").innerHTML = "This field is required";
+                document.getElementById("1f").style.border = "solid red";
+            }
+            else
+            {
+                document.getElementById("1").innerHTML = "";
+                document.getElementById("1f").style.border = "solid black";
+            }
+            if((String)(document.getElementById("2f").value).length==0)
+            {
+                document.getElementById("2").innerHTML = "A valid email address is required";
+                document.getElementById("2f").style.border = "solid red";
+            }
+            else
+            {
+                document.getElementById("2").innerHTML = "";
+                document.getElementById("2f").style.border = "solid black";
+            }
+            if((String)(document.getElementById("3f").value).length==0)
+            {
+                document.getElementById("3").innerHTML = "A valid url is required";
+                document.getElementById("3f").style.border = "solid red";
+            }
+            else
+            {
+                document.getElementById("3").innerHTML = "";
+                document.getElementById("3f").style.border = "solid black";
+            }
+            if((String)(document.getElementById("4f").value).length==0)
+            {
+                document.getElementById("4").innerHTML = "This field is required";
+                document.getElementById("4f").style.border = "solid red";
+            }
+            else
+            {
+                document.getElementById("4").innerHTML = "";
+                document.getElementById("4f").style.border = "solid black";
+            }
+        }
+    </script>
+</body>
+</html>

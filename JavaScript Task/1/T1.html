@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 1</title>
+</head>
+<body>
+    <script>
+        function reverse(n)
+        {
+            n = (String)(n);
+            var num = "";
+            for(i=n.length-1;i>=0;i--)
+            {
+                num = num + n.charAt(i)
+            }
+            return num;
+        }
+        console.log("Reverse of 32243 is " + reverse(32243));
+    </script>
+</body>
+</html>

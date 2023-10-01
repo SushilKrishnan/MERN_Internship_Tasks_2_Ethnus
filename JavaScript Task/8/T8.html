@@ -1,0 +1,267 @@
+<html>
+    <head>
+        <title>Task 8</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <center>
+        <h1>Registration form</h1>
+        <form>
+            <table>
+
+                <tr class="tro">
+                    <td class="lab">
+                        <label for="fn">First Name</label>
+                    </td>
+                    <td class="fie">
+                        <input id="fn" type="text" style="width: 450;">
+                    </td>
+                    <td class="wn">
+                        <label for="fn" id="fnl" class="wn"></label>
+                    </td>
+                </tr>
+
+                <tr class="tro">
+                    <td class="lab">
+                        <label for="ln">Last Name</label>
+                    </td>
+                    <td class="fie">
+                        <input id="ln" type="text" style="width: 450;">
+                    </td>
+                    <td class="wn">
+                        <label for="ln" id="lnl" class="wn"></label>
+                    </td>
+                </tr>
+
+                <tr class="tro">
+                    <td class="lab">
+                        <label for="em">Email</label>
+                    </td>
+                    <td class="fie">
+                        <input id="em" type="email" style="width: 450;">
+                    </td>
+                    <td class="wn">
+                        <label for="em" id="eml" class="wn"></label>
+                    </td>
+                </tr>
+
+                <tr class="tro">
+                    <td class="lab">
+                        <label for="pw">Password</label>
+                    </td>
+                    <td class="fie">
+                        <input id="pw" type="password" style="width: 450;">
+                    </td>
+                    <td class="wn">
+                        <label for="pw" id="pwl" class="wn"></label>
+                    </td>
+                </tr>
+
+                <tr class="tro">
+                    <td class="lab">
+                        <label for="rpw">Re-enter Password</label>
+                    </td>
+                    <td class="fie">
+                        <input id="rpw" type="password" style="width: 450;">
+                    </td>
+                    <td class="wn">
+                        <label for="rpw" id="rpwl" class="wn"></label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="lab" rowspan="2">
+                        Gender
+                    </td>
+                    <td>
+                        <input type="radio" id="ml" value="Male" name="gen" checked="checked">
+                        <label for="ml">Male</label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type="radio" id="fml" value="Female" name="gen">
+                        <label for="fml">Female</label>
+                    </td>
+                </tr>
+
+                <tr class="tro">
+                    <td class="lab">
+                        <label for="ag">Age</label>
+                    </td>
+                    <td class="fie">
+                        <input id="ag" type="number" style="width: 450;">
+                    </td>
+                    <td class="wn">
+                        <label for="ag" id="agl" class="wn"></label>
+                    </td>
+                </tr>
+
+                <tr class="tro">
+                    <td class="lab">
+                        <label for="ph">Phone Number</label>
+                    </td>
+                    <td class="fie">
+                        <input id="ph" type="number" style="width: 450;">
+                    </td>
+                    <td class="wn">
+                        <label for="ph" id="phl" class="wn"></label>
+                    </td>
+                </tr>
+
+                <tr class="tro">
+                    <td class="lab">
+                        <label for="ad">Address</label>
+                    </td>
+                    <td class="fie">
+                        <textarea id="ad" cols="58" rows="5"></textarea>
+                    </td>
+                    <td class="wn">
+                        <label for="ad" id="adl" class="wn"></label>
+                    </td>
+                </tr>
+
+                <tr class="tro">
+                    <td class="lab">
+                        <label for="st">State</label>
+                    </td>
+                    <td class="fie">
+                        <input id="st" type="text" style="width: 450;">
+                    </td>
+                    <td class="wn">
+                        <label for="st" id="stl" class="wn"></label>
+                    </td>
+                </tr>
+
+                <tr class="tro">
+                    <td class="lab">
+                        <label for="co">Country</label>
+                    </td>
+                    <td class="fie">
+                        <select name="Country" id="co">
+                            <option value="">Choose your country</option>
+                            <option value="India">India</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr class="tro">
+                    <td class="lab">
+                        <label for="la">Languages known</label>
+                    </td>
+                    <td class="fie">
+                        <input type="checkbox" id="eng">
+                        <label for="eng">English</label>
+                        <input type="checkbox" id="kan">
+                        <label for="kan">Kannada</label>
+                        <input type="checkbox" id="hin">
+                        <label for="hin">Hindi</label>
+                        <input type="checkbox" id="tel">
+                        <label for="tel">Telugu</label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        <input type="checkbox" id="dec">
+                        <label for="dec">Hereby I declare all the given details are true</label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td style="text-align: end; padding-bottom: 10px;" colspan="2">Log in to <a href="">Ethnus</a> website</td>
+                </tr>
+
+            </table>
+            <input type="button" onclick="reg()" value="REGISTER" class="re">
+        </form>
+        <script>
+            function reg()
+            {
+
+                if((document.getElementById("fn").value).length==0)
+                {
+                    document.getElementById("fnl").innerHTML = "POOR";
+                }
+                else
+                {
+                    document.getElementById("fnl").innerHTML = "";
+                }
+
+                if((document.getElementById("ln").value).length==0)
+                {
+                    document.getElementById("lnl").innerHTML = "POOR";
+                }
+                else
+                {
+                    document.getElementById("lnl").innerHTML = "";
+                }
+
+                if((document.getElementById("em").value).length==0)
+                {
+                    document.getElementById("eml").innerHTML = "POOR";
+                }
+                else
+                {
+                    document.getElementById("eml").innerHTML = "";
+                }
+
+                if((document.getElementById("pw").value).length==0)
+                {
+                    document.getElementById("pwl").innerHTML = "POOR";
+                }
+                else
+                {
+                    document.getElementById("pwl").innerHTML = "";
+                }
+
+                if(((document.getElementById("rpw").value).length==0)||((document.getElementById("pw").value)!=(document.getElementById("rpw").value)))
+                {
+                    document.getElementById("rpwl").innerHTML = "POOR OR MISMATCH";
+                }
+                else
+                {
+                    document.getElementById("rpwl").innerHTML = "";
+                }
+
+                if((document.getElementById("ag").value).length==0)
+                {
+                    document.getElementById("agl").innerHTML = "POOR";
+                }
+                else
+                {
+                    document.getElementById("agl").innerHTML = "";
+                }
+
+                if((document.getElementById("ph").value).length==0)
+                {
+                    document.getElementById("phl").innerHTML = "POOR";
+                }
+                else
+                {
+                    document.getElementById("phl").innerHTML = "";
+                }
+
+                if((document.getElementById("ad").value).length==0)
+                {
+                    document.getElementById("adl").innerHTML = "POOR";
+                }
+                else
+                {
+                    document.getElementById("adl").innerHTML = "";
+                }
+
+                if((document.getElementById("st").value).length==0)
+                {
+                    document.getElementById("stl").innerHTML = "POOR";
+                }
+                else
+                {
+                    document.getElementById("stl").innerHTML = "";
+                }
+
+            }
+        </script>
+    </body>
+</html>
